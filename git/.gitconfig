@@ -38,9 +38,7 @@
     ###########
     a = add
     ###########
-    br = branch
-    brv = br -v  # alias to "br" alias
-    branch-name = br | grep ^* | cut -d' ' -f2
+    br = branch -v
     ###########
     cm = commit
     cma = cm --amend       #|
@@ -60,7 +58,7 @@
     dfc = df HEAD          #|
     ###########
     l = --graph --oneline --all
-    lg = log --graph --abbrev-commit --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s : %Cgreen[%cr] %C(bold blue)<%an>%Creset'
+    ls = log --graph --abbrev-commit --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s : %Cgreen[%cr] %C(bold blue)<%an>%Creset'
     ###########
     mg = merge
     mgt = mergetool
