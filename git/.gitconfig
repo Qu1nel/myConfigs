@@ -1,0 +1,78 @@
+[user]
+    name = Ivan Covach
+    email = quinelleave@gmail.com
+    username = Quinel
+[init]
+    defaulbranch = main
+[core]
+    editor = nvim
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    quotepath = false
+[credential]
+	helper = cache --timeout 1800
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[diff]
+    tool = nvimdiff
+[merge]
+    tool = nvimdiff2
+[alias]
+    aliases = !git config --get-regexp 'alias.*' | sed 's/[ ]/ = /' | sort  # colrm 1 6  
+    ###########
+    a = add
+    ###########
+    br = branch
+    brv = br -v  # alias to "br" alias
+    branch-name = br | grep ^* | cut -d' ' -f2
+    ###########
+    cm = commit
+    cma = cm --amend       #|
+    cmd = cm -v            #| aliases to "cm" alias
+    cmda = cm --amend      #|
+    ###########
+    co = checkout
+    ###########
+    s = status
+    ss = s --sort  # alias to "s" alias
+    ###########
+    sw = switch
+    ###########
+    df = diff              #|
+    dt = difftool          #| aliases to "df" alias
+    dfst = df --staged     #|
+    dfc = df HEAD          #|
+    ###########
+    l = --graph --oneline --all
+    lg = log --graph --abbrev-commit --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s : %Cgreen[%cr] %C(bold blue)<%an>%Creset'
+    ###########
+    mg = merge
+    mgt = mergetool
+    ###########
+    prune-local = br --merged | grep -v master | xargs -n 1 git br -d
+    prune-all = remote | xargs -n 1 git remote prune
+    ###########
+    restore-hard = co .  # alias "co" alias
+    ###########
+    unstage = restore --staged
+    unstage-hard = reset HEAD
+    ###########
+    who = shortlog -s --
+    ###########
+    visual = !gitk
