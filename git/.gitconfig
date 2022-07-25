@@ -16,9 +16,9 @@
     status = auto
     branch = auto
 [color "branch"]
-    current = yellow reverse
+    current = green
     local = yellow
-    remote = green
+    remote = red
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
@@ -26,9 +26,9 @@
     new = green bold
     whitespace = red reverse
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+    added = green
+    changed = yellow
+    untracked = red
 [diff]
     tool = nvimdiff
 [merge]
