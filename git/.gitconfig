@@ -47,7 +47,7 @@
     cm = commit
     cma = cm --amend       #|
     cmd = cm -v            #| aliases to "cm" alias
-    cmda = cm --amend      #|
+    cmda = cmd --amend      #|
     ###########
     co = checkout
     ###########
